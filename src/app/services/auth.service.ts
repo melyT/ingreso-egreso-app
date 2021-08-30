@@ -42,7 +42,7 @@ export class AuthService {
       } else {
         // no existe
         this._user = null;
-        this.userSub$.unsubscribe();
+        this.userSub$?.unsubscribe();
         this.store.dispatch( actions.unSetUser() );
         this.store.dispatch( ingresosEgresosActions.unSetItems() );
       }
